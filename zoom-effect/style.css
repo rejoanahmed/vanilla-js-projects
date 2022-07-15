@@ -1,0 +1,22 @@
+* {
+  margin: 0%;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  text-decoration: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: rgb(97, 53, 53); */
+}
+#container {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
