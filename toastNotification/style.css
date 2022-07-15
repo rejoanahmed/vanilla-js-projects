@@ -1,0 +1,37 @@
+* {
+  margin: 0%;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  text-decoration: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(97, 53, 53);
+}
+
+button {
+  font-size: large;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+#notification {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: rebeccapurple;
+  color: white;
+}
+#notification p {
+  padding: 0.2rem 3rem;
+}
