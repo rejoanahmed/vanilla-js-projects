@@ -1,12 +1,15 @@
-const Url = "https://www.javascripttutorial.net/sample/promise/api.json";
-const btn = document.querySelector("#btnGet");
-const msg = document.querySelector("#message");
+const image = document.querySelector("#image");
+const stopBtn = document.querySelector("#btnStop");
+const img = async () => {
+  const res = await fetch("https://picsum.photos/1000/500");
+  return res.url;
+};
 
-const load = (url) => fetch(url);
-
-btn.addEventListener("click", () => {
-  load(Url)
-    .then((response) => response.json())
-    .then((data) => (msg.innerHTML = data.message))
-    .catch((err) => console.log(err));
+const b = setInterval(() => {
+  img().then((url) => {
+    image.setAttribute("src", url);
+  });
+}, 2000);
+stopBtn.addEventListener("click", () => {
+  clearInterval(b);
 });
