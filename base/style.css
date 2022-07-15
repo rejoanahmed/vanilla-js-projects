@@ -1,0 +1,14 @@
+* {
+  margin: 0%;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(97, 53, 53);
+}
