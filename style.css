@@ -1,0 +1,18 @@
+* {
+  margin: 0%;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+.sideBar {
+  position: relative;
+  float: right;
+  background-color: azure;
+  height: 100vh;
+  padding: 10px;
+}
+.toggle-icon {
+  position: fixed;
+  font-size: 20px;
+}
