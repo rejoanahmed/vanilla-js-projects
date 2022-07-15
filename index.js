@@ -1,22 +1,12 @@
-let success = false;
+const Url = "https://www.javascripttutorial.net/sample/promise/api.json";
+const btn = document.querySelector("#btnGet");
+const msg = document.querySelector("#message");
 
-function getUsers() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (success) {
-        resolve([
-          { username: "john", email: "john@test.com" },
-          { username: "jane", email: "jane@test.com" },
-        ]);
-      } else {
-        reject("Failed to the user list");
-      }
-    }, 1000);
-  });
-}
+const load = (url) => fetch(url);
 
-const promise = getUsers();
-
-promise.catch((error) => {
-  console.log(error);
+btn.addEventListener("click", () => {
+  load(Url)
+    .then((response) => response.json())
+    .then((data) => (msg.innerHTML = data.message))
+    .catch((err) => console.log(err));
 });
